@@ -454,8 +454,7 @@ button {
 }
 
 .footer-subcribe {
-  margin-left: 80px;
-  padding-left: auto;
+  margin-left: auto;
 }
 
 .footer-subscribe-text {
@@ -488,6 +487,11 @@ button {
   padding-left: 16px;
 }
 
+.footer-input:hover,
+.footer-input:focus {
+  border-color: #31d0aa;
+}
+
 .footer-input::placeholder {
   font-size: 12px;
   line-height: 2;
@@ -515,6 +519,11 @@ button {
   letter-spacing: 0.04em;
   text-align: left;
   color: #fff;
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: #31d0aa;
 }
 
 .footer-subscribe-icon {
@@ -639,6 +648,8 @@ button {
 
   padding-left: 38px;
   padding-right: 24px;
+
+  outline: transparent;
 }
 
 .input-wrap {
@@ -743,4 +754,9 @@ button {
 
   margin: 0 auto;
   display: block;
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: #404bbf;
 }
