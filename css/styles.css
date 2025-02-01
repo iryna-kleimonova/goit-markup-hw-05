@@ -487,6 +487,12 @@ button {
   padding-left: 16px;
 
   outline: none;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: #ffffff;
 }
 
 .footer-input::placeholder {
@@ -494,10 +500,6 @@ button {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-}
-
-.footer-subcribe-wrap {
-  position: relative;
 }
 
 .footer-subscribe-btn {
@@ -510,12 +512,17 @@ button {
   background-color: #4d5ae5;
   border: none;
 
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: left;
   color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-subscribe-btn:hover,
@@ -524,12 +531,8 @@ button {
 }
 
 .footer-subscribe-icon {
-  position: absolute;
   fill: #ffffff;
-
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: 16px;
 }
 
 /* --------MODAL------ */
@@ -567,7 +570,7 @@ button {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .is-open {
@@ -587,12 +590,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 
-  border-radius: 100%;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -603,6 +610,8 @@ button {
 
 .modal-icon-close {
   fill: #2e2f42;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .modal-icon-close,
@@ -619,7 +628,6 @@ button {
   color: #2e2f42;
 
   margin-bottom: 16px;
-  padding-top: 48px;
 }
 
 .modal-field {
@@ -629,10 +637,12 @@ button {
 .modal-label {
   margin-bottom: 4px;
 
+  line-height: 1.17;
   font-size: 12px;
-  line-height: 1.167;
   letter-spacing: 0.04em;
   color: #8e8f99;
+
+  display: block;
 }
 
 .modal-input {
@@ -647,6 +657,8 @@ button {
   padding-right: 24px;
 
   outline: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-wrap {
@@ -667,10 +679,17 @@ button {
 .modal-input-icon {
   fill: #2e2f42;
   stroke: #111111;
+
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-field-comment {
+  margin-bottom: 16px;
 }
 
 .modal-textarea {
@@ -680,31 +699,44 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
   border-radius: 4px;
-  padding: 16px;
-  font-size: 12px;
+
   outline: transparent;
   resize: none;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+
+  padding: 8px 16px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea::placeholder {
   font-size: 12px;
-  line-height: 1.167;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  margin-bottom: 4px;
+}
+
+.modal-field-checkbox {
+  margin-bottom: 24px;
 }
 
 .modal-check {
 }
 
 .modal-check-text {
-  font-size: 14px;
-  line-height: 1.21;
-  letter-spacing: -0.02em;
-  color: rgba(64, 64, 64, 0.6);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+
+  color: #8e8f99;
 }
 
 .modal-check-item {
@@ -715,16 +747,20 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
 
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-check-text .modal-check-item {
-  border: 1px solid #404bbf;
+  border: none;
   background-color: #404bbf;
-  fill: #fff;
+  fill: #f4f4fd;
 }
 
 .check-icon {
@@ -738,7 +774,7 @@ button {
 .modal-submit-btn {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
 
   border: none;
@@ -748,9 +784,13 @@ button {
 
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 
   margin: 0 auto;
   display: block;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit-btn:hover,
