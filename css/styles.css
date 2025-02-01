@@ -453,6 +453,78 @@ button {
   fill: #f4f4fd;
 }
 
+.footer-subcribe {
+  margin-left: 80px;
+}
+
+.footer-subscribe-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+
+  margin-bottom: 16px;
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-field {
+}
+
+.footer-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+
+  padding-left: 16px;
+}
+
+.footer-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.footer-subcribe-wrap {
+  position: relative;
+}
+
+.footer-subscribe-btn {
+  border-radius: 4px;
+  padding: 8px 24px;
+
+  width: 165px;
+  height: 40px;
+
+  background-color: #4d5ae5;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #fff;
+}
+
+.footer-subscribe-icon {
+  position: absolute;
+  fill: #ffffff;
+
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* --------MODAL------ */
 
 .backdrop {
@@ -580,7 +652,7 @@ button {
 .modal-input:hover + .modal-input-icon,
 .modal-input:focus + .modal-input-icon {
   fill: #4d5ae5;
-  border-color: #4d5ae5;
+  stroke: #4d5ae5;
 }
 
 .modal-input-icon {
