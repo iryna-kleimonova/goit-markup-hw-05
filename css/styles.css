@@ -485,11 +485,8 @@ button {
   background-color: transparent;
 
   padding-left: 16px;
-}
 
-.footer-input:hover,
-.footer-input:focus {
-  border-color: #31d0aa;
+  outline: none;
 }
 
 .footer-input::placeholder {
